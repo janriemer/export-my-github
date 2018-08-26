@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "sourceMap": true,
+      "declaration": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "declarationDir": "dist/types",
+      "strict": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "lib": [
+        "es2016",
+        "dom"
+      ],
+      "rootDir": "src",
+      "outDir": "dist",
+      "target": "es5",
+      "typeRoots": [
+        "./node_modules/@types"
+      ],
+    }
+}

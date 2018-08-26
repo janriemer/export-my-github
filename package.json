@@ -1,0 +1,52 @@
+{
+  "name": "export-my-github",
+  "version": "1.0.0",
+  "description": "Export your data from Github - Easy as cake!",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "export-my-github": "dist/index.js",
+    "emg": "dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janriemer/export-my-github.git"
+  },
+  "scripts": {
+    "build": "del dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "github",
+    "data",
+    "leave-github",
+    "export",
+    "GDPR",
+    "ICE"
+  ],
+  "author": "Jan Riemer <janriemer@tutanota.de>",
+  "license": "GNU GPLv3",
+  "dependencies": {
+    "archiver": "^3.0.0",
+    "beeper": "^1.1.1",
+    "download": "^7.1.0",
+    "got": "^9.1.0",
+    "inquirer": "^6.2.0",
+    "lodash": "^4.17.10",
+    "lodash.flatmap": "^4.5.0",
+    "lodash.range": "^3.2.0",
+    "rxjs": "^6.3.2",
+    "ts-node": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/archiver": "^2.1.2",
+    "@types/download": "^6.2.2",
+    "@types/got": "^8.3.3",
+    "@types/inquirer": "0.0.43",
+    "@types/lodash": "^4.14.116",
+    "@types/lodash.flatmap": "^4.5.4",
+    "@types/lodash.range": "^3.2.4",
+    "del-cli": "^1.1.0"
+  }
+}

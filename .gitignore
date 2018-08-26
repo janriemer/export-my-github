@@ -1,0 +1,7 @@
+/dist
+/node_modules
+/shrinkwrap.yaml
+.DS_Store
+/*.js
+/*.map
+/index.d.ts
