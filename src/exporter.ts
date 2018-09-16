@@ -105,7 +105,7 @@ function getFollowing(user: User) {
 
 export async function handleAnswersForExport(answers: AnswersForExport, user: User) {
     const {repoNames, otherUserData} = answers;
-    const fileNameDestination = __dirname + '/myExportedGithub.tar.gz';
+    const fileNameDestination = process.cwd() + '/myExportedGithub.tar.gz';
     const fileDestinationStream = createWriteStream(fileNameDestination);
 
     //TODO: refactor this!
