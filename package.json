@@ -13,7 +13,7 @@
     "url": "git+https://github.com/janriemer/export-my-github.git"
   },
   "scripts": {
-    "build": "del dist && tsc",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build"
   },
@@ -26,7 +26,7 @@
     "ICE"
   ],
   "author": "Jan Riemer <janriemer@tutanota.de>",
-  "license": "GNU GPLv3",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "archiver": "^3.0.0",
     "beeper": "^1.1.1",
