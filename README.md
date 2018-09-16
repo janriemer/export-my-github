@@ -57,4 +57,4 @@ After your username and PAT have been validated, you can choose which data you w
 Your exported data will be archived in a gzip folder named `myExportedGithub.tar.gz` in the same directory where you have executed `export-my-github`.
 
 ## License
-GNU GPLv3
+[GNU GPLv3](https://github.com/janriemer/export-my-github/blob/master/LICENSE)
