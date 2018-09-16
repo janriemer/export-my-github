@@ -4,7 +4,7 @@ A CLI tool for exporting your data on Github to your local hard drive.
 ## Motivation
 According to [GDPR Art. 20](https://gdpr-info.eu/art-20-gdpr/) a company has to give you access to the personal data it has stored about you *in a structured, commonly used and machine-readable format* where *the processing is carried out by **automated means***. In my opinion, Github fails at this miserably! You have to [`curl`](https://developer.github.com/changes/2018-05-24-user-migration-api/) [your](https://developer.github.com/v3/migrations/users/#start-a-user-migration) [way](https://developer.github.com/v3/migrations/users/#get-the-status-of-a-user-migration) to their apis to get all the data you want. They call it ["Data Portability tools"](https://help.github.com/articles/github-privacy-statement/#how-you-can-access-and-control-the-information-we-collect) - what a cheek!
 
-Once again, it seems we have to [clear out the :unicorn: :hankey:](https://vimeo.com/200666291).
+Once again, it seems we have to [clear out the :unicorn: :hankey:](https://vimeo.com/200666291). [Let's cry power!](https://www.youtube.com/watch?v=j2YgDua2gpk)
 
 You might ask:
 
@@ -23,7 +23,7 @@ $ npx export-my-github
 
 ## 	Prerequisites
 1. Node >= 8
-2. Make sure you have created a [personal access token](https://github.com/settings/tokens) with read access for your Github account on the following entities:
+2. Create a [personal access token](https://github.com/settings/tokens) with read access for your Github account on the following entities:
 
 - [x] repo
     - [x] repo:status
