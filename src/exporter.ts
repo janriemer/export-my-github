@@ -127,8 +127,6 @@ export async function handleAnswersForExport(answers: AnswersForExport, user: Us
             },
             async () => {
                 console.log('Migration archive is now exporting...');
-    
-                const fileDestinationStream = createWriteStream(__dirname + '/myExportedGithub.tar.gz');
                 
                 const archive = await createExportArchive(
                     user, otherUserData, urlWithArchiveId + '/archive'
