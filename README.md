@@ -23,7 +23,7 @@ $ npx export-my-github
 
 ## 	Prerequisites
 1. Node >= 8
-2. Create a [personal access token](https://github.com/settings/tokens) with read access for your Github account on the following entities:
+2. [Create a personal access token](https://github.com/settings/tokens) with read access for your Github account on the following entities:
 
 - [x] repo
     - [x] repo:status
@@ -46,7 +46,7 @@ $ emg
 
 After execution you will first be asked for your username and personal access token (PAT) (see [Prerequisites](#Prerequisites)).
 
-> Warning: Do not give your PAT to a software or website you don't trust! Otherwise it gains the right to do anything you have granted the PAT to do. This tool is open source, so you can always check the trustworthiness of this tool for yourself.
+> :warning: Do not give your PAT to a software or website you don't trust! Otherwise it gains the right to do anything you have granted the PAT to do. This tool is open source, so you can always check the trustworthiness of this tool for yourself.
 
 After your username and PAT have been validated, you can choose which data you want to export. Currently the following data can be exported:
 - [x] Your repositories
