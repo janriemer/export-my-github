@@ -149,7 +149,7 @@ export async function handleAnswersForExport(answers: AnswersForExport, user: Us
         console.log('You have choosen to not export any data from your Github.');
         console.log(`If you don't know how to select the data to export:
 - You can navigate with the <up-/down>-keys between the different options
-- Press <space> to select certain data.`)
+- Press <space> to select a certain option.`)
     }
 }
 
