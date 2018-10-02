@@ -33,7 +33,7 @@ function getTotalNumberOfPages(headers: IncomingHttpHeaders): number {
 
 export async function getRepoNames(user: User): Promise<string[]> {
     try {
-        const result = await got(`${BASE_URL}/user/repos?page=1&per_page=2`,
+        const result = await got(`${BASE_URL}/user/repos?page=1&per_page=50`,
             provideGotOptions(user));
 
         const firstPageRepos = JSON.parse(result.body) as RepoApiData[];
