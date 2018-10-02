@@ -25,7 +25,8 @@ function getTotalNumberOfPages(headers: IncomingHttpHeaders): number {
             throw new Error(`Can't get total number of pages from header's 'link' property.`);
         }
     } else {
-        throw new Error(`Headers have no 'link' property.`);
+        // if we don't have a link property, we only have one page
+        return 1;
     }
 
     return numberOfPages;
@@ -33,7 +34,8 @@ function getTotalNumberOfPages(headers: IncomingHttpHeaders): number {
 
 export async function getRepoNames(user: User): Promise<string[]> {
     try {
-        const result = await got(`${BASE_URL}/user/repos?page=1&per_page=50`,
+        const PAGE_WINDOW = 50;
+        const result = await got(`${BASE_URL}/user/repos?page=1&per_page=${PAGE_WINDOW}`,
             provideGotOptions(user));
 
         const firstPageRepos = JSON.parse(result.body) as RepoApiData[];
@@ -43,7 +45,7 @@ export async function getRepoNames(user: User): Promise<string[]> {
         const restRepos = await flatMap(
             range(2, numberOfPages + 1)
                 .map(async page =>
-                    await got(`${BASE_URL}/user/repos?page=${page}&per_page=2`,
+                    await got(`${BASE_URL}/user/repos?page=${page}&per_page=${PAGE_WINDOW}`,
                         provideGotOptions(user)))
                 .map(async res => {
                     const localRes = await res;
